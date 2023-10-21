@@ -66,7 +66,7 @@ class sinFunc:
 
 
 class ledPixels:
-    def __init__(self, nPix, ledPin):
+    def __init__(self, nPix=20, ledPin=board.GP0):
         # self.nPix = nPix
         self.ledPin = ledPin
         self.nPixSet(nPix)
@@ -94,6 +94,9 @@ class ledPixels:
         '''Light up pixel n with color'''
         self.pixels[n] = color
         self.pixels.show()
+        
+    def off(self):
+        self.setColor((0,0,0))
 
     def lightRange(self, rng, color=(100, 0, 0)):
         '''Light up range of pixels (rng) with color'''
@@ -516,3 +519,5 @@ class ledPixels:
         time.sleep(dt)
         self.light(n, (0, 0, 0))
         time.sleep(dt)
+
+    

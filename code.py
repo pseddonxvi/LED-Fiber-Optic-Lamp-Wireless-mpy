@@ -22,23 +22,30 @@ while True:
                 pixel_index = (i * 256 // pix.nPix) + j
                 pix.pixels[i] = pix.wheel(pixel_index & 255, 0.5)
             if touch.value:
+                pix.light(0, (200,0,0))
+                while touch.value:
+                    time.sleep(0.1)
                 switch = not switch
                 print("Touch", switch)
                 pix.setColor((0,0,0))
         
-                time.sleep(0.5)
+                #time.sleep(0.5)
                 break
             pix.pixels.show()
             time.sleep(0.01)
             
     #time.sleep(0.5)
     if touch.value:
+        pix.light(0, (200,0,0))
+        while touch.value:
+            time.sleep(0.1)
         switch = not switch
-        print("Touch On", switch)
-        time.sleep(0.5)
+        #print("Touch On", switch)
+        #time.sleep(0.5)
     
         
     
 
 # pix.rainbowForever(speed=0.001)
+
 
