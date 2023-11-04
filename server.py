@@ -68,6 +68,7 @@ def ledButton(request: HTTPRequest):
     print(f"data: {data} & action: {data['action']}")
     rData = {}
     
+    # SETTINGS HERE
     if (data['action'] == 'ON'):
         led.value = True
         ledMode="rainbow"
@@ -101,9 +102,7 @@ def touchCheck():
 
 while True:
     try:
-        # Do something useful in this section,
-        # for example read a sensor and capture an average,
-        # or a running total of the last 10 samples
+        # BEHAVIOR
         if ledMode == "rainbow":
             # rainbow
             for j in range(255):
