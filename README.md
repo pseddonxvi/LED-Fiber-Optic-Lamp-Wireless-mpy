@@ -3,7 +3,7 @@ Code for LED lamps.
 
 # Requirements:
 * Raspberry Pi Pico W
-* Quick setup for CircuitPython v9: 
+* Quick setup for CircuitPython v8: 
     * Install CircuitPython (next section).
     * Copy all files in this repository onto the Pico.
     * Bob's your uncle.
