@@ -2,16 +2,15 @@ Code for LED lamps.
 
 
 # Requirements:
-* Raspberry Pi Pico or Pico W
-* Quick setup for Circuitpython v9: 
-    * Install circuitpython (next section).
+* Raspberry Pi Pico W
+* Quick setup for CircuitPython v9: 
+    * Install CircuitPython (next section).
     * Copy all files in this repository onto the Pico.
     * Bob's your uncle.
 
 # Installation
-## Install Circuitpython
-Download and copy the appropriate circuitpython file (version 8) to the Raspberry Pi Pico (or pico W):
-* For Pico: https://circuitpython.org/board/raspberry_pi_pico/
+## Install CircuitPython
+Download and copy the appropriate CircuitPython file (version 8) to the Raspberry Pi Pico W:
 * For Pico W: https://circuitpython.org/board/raspberry_pi_pico_w/
 
 The Pico will rename itself CIRCUITPI
@@ -27,4 +26,4 @@ The Pico will rename itself CIRCUITPI
 
 ## Settings (Pico vs PicoW)
 * the default _code.py_ file is designed for the Pico with a touch sensor only.
-* __server.py__: is designed for the picoW, to run by default replace the _code.py_ file with this file.
+* __server.py__: is designed for the picoW, to run by default, replace the _code.py_ file with this file.
