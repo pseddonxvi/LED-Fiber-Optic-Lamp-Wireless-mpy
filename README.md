@@ -10,7 +10,7 @@ Code for LED lamps.
 
 # Installation
 ## Install Circuitpython
-Download and copy the appropriate circuitpython file (version 9) to the Raspberry Pi Pico (or pico W):
+Download and copy the appropriate circuitpython file (version 8) to the Raspberry Pi Pico (or pico W):
 * For Pico: https://circuitpython.org/board/raspberry_pi_pico/
 * For Pico W: https://circuitpython.org/board/raspberry_pi_pico_w/
 
