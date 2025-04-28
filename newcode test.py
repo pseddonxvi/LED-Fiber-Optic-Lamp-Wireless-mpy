@@ -22,6 +22,7 @@ from ledPixelsPico import *
 nPix = 32
 pix = ledPixels(nPix, board.GP14)
 ledMode="rainbow"
+solidColor=(100,0,0)
 
 with open("index.html") as f:
     webpage = f.read()
@@ -84,7 +85,28 @@ def ledButton(request: HTTPRequest):
         
     with HTTPResponse(request) as response:
         response.send(json.dumps(rData)) 
-     
+   
+@server.route("/mode", "POST")
+def ledButton(request: HTTPRequest):
+    # raw_text = request.body.decode("utf8")
+    global ledMode
+    global solidColor
+    data = requestToArray(request)
+    print(f"data: {data} & action: {data['action']}")
+    rData = {}
+    
+    if (data['action'] == 'Solid'):
+        ledMode="Solid"
+        solidColor=data["value"]
+        
+    rData['item'] = "mode"
+    rData['status'] = ledMode
+    
+    print("ledMode:", ledMode)
+        
+    with HTTPResponse(request) as response:
+        response.send(json.dumps(rData)) 
+    
 print(f"Listening on http://{wifi.radio.ipv4_address}:80")
 # Start the server.
 server.start(str(wifi.radio.ipv4_address))
@@ -107,6 +129,8 @@ while True:
                     time.sleep(0.01)
                 else:
                     break
+        elif ledMode=="Solid":
+            pix.setColor(solidColor)
     
                 
         else:
@@ -117,5 +141,3 @@ while True:
     except OSError as error:
         print(error)
         continue
-
-        
