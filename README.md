@@ -23,7 +23,6 @@ The Pico will rename itself CIRCUITPI
 * The Pico will run the code.py file by default. 
     * This program assumes you have a 30 pixel array (at GPIO15) and a touch sensor (at GPIO16).
     * It will run a rainbow pattern that turns on and off when you touch the touch sensor.
+*A lot of the files aren't needed and are probably duplicates with different names but I an WAY too lazy to go through all of that, code.py runs by default and works for me tho
 
-## Settings (Pico vs PicoW)
-* the default _code.py_ file is designed for the Pico with a touch sensor only.
-* __server.py__: is designed for the picoW, to run by default, replace the _code.py_ file with this file.
+
